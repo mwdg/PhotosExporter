@@ -52,6 +52,16 @@ let defaultMediaGroupTypeWhiteList = [
     "com.apple.Photos.ScreenshotGroup"
 ]
 
+let michaelMediaGroupTypeWhiteList = [
+    "com.apple.Photos.FavoritesGroup",
+    "com.apple.Photos.SharedGroup",  //  actual shared albums have mediaGroup.parent?.typeIdentifier "com.apple.Photos.SharedGroup"
+    "com.apple.Photos.LivePhotosGroup",
+    "com.apple.Photos.LongExposureGroup",
+    "com.apple.Photos.TimelapseGroup",
+    "com.apple.Photos.SloMoGroup",
+    "com.apple.Photos.AnimatedGroup"
+]
+
 // TODO always apply this blacklist condition:
 //  !("com.apple.Photos.FacesAlbum" == mediaGroup.typeIdentifier && mediaGroup.parent?.typeIdentifier == "com.apple.Photos.AlbumsGroup") &&
 //  !("com.apple.Photos.PlacesAlbum" == mediaGroup.typeIdentifier && mediaGroup.parent?.typeIdentifier == "com.apple.Photos.RootGroup")
